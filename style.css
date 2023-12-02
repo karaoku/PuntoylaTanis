@@ -10,6 +10,9 @@
 		width: 100% !important;
 		margin-bottom: 20px !important;
 	}
+	.logo-container .logo {
+		width: 50% !important;
+	}
 	.title{
 		font-size: 1.5rem !important;
 	}
@@ -84,6 +87,8 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 50px;
+	background-color: #333;
+	padding: 3%;
 }
 .app-features {
 	width: 50%;

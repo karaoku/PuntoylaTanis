@@ -62,14 +62,14 @@
 					<div class="app-markets" id="appMarkets">
 						<!-- İOS için -->
 						<a href="https://apps.apple.com/tr/app/id1536803478" id="iosLink" style="display: none;">
-							<img id="marketImg" src="img/appStore.jpg">
+							<img src="img/appStore.jpg">
 						</a>
 						
-						<span id="windows" style="color: #555; font-size: .7rem; display: none;">veya</span>
+						<span id="windows" style="color: #CCC; font-size: .7rem; display: none;">veya</span>
 
 						<!-- Android için -->
 						<a href="https://play.google.com/store/apps/details?id=com.punto.punto" id="androidLink" style="display: none;">
-							<img id="marketImg" src="img/googlePlay2.png">
+							<img src="img/googlePlay2.png">
 						</a>
 					</div>
 				</div>
@@ -110,12 +110,13 @@
 		
 		if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
 			document.getElementById('iosLink').style.display = 'block';
+			document.getElementById('iosLink').style.width = '60%';
 			document.getElementById('appMarkets').style.justifyContent = 'center';
-			document.getElementById('marketImg').style.width = '150%';
+
 		} else if (/Android/.test(navigator.userAgent)) {
 			document.getElementById('androidLink').style.display = 'block';
+			document.getElementById('androidLink').style.width = '60%';
 			document.getElementById('appMarkets').style.justifyContent = 'center';
-			document.getElementById('marketImg').style.width = '150%';
 		} else {
 			document.getElementById('androidLink').style.display = 'block';
 			document.getElementById('iosLink').style.display = 'block';
