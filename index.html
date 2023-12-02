@@ -110,13 +110,14 @@
 		
 		if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
 			document.getElementById('iosLink').style.display = 'block';
+			document.getElementById('appMarkets').style.justifyContent = 'center';
 		} else if (/Android/.test(navigator.userAgent)) {
 			document.getElementById('androidLink').style.display = 'block';
+			document.getElementById('appMarkets').style.justifyContent = 'center';
 		} else {
 			document.getElementById('androidLink').style.display = 'block';
 			document.getElementById('iosLink').style.display = 'block';
 			document.getElementById('windows').style.display = 'block';
-			document.getElementById('appMarkets').style.alignContent = 'center';
 		}
 	</script>
 </body>
