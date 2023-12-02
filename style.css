@@ -1,8 +1,12 @@
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 700px) {
 	.main-desc p{
 		font-size: .8rem !important;
 	}
-	.app-markets, .app-features{
+	.app-markets {
+		width: 100% !important;
+		margin-bottom: 20px !important;
+	}
+	.app-features {
 		width: 100% !important;
 		margin-bottom: 20px !important;
 	}

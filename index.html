@@ -59,19 +59,23 @@
               <h2>Dizi-film, teknoloji-bilim eksenli haberler</h2>
             </div>
 					</div>
-					<div class="app-markets">
-						<a href="https://rebrand.ly/PuntoWebGooglePlay">
-							<img src="img/googlePlay.jpg">
-						</a>
-            <span style="color: #555; font-size: .7rem;">veya</span>
-						<a href="https://rebrand.ly/PuntoWebAppStore">
+					<div class="app-markets" id="appMarkets">
+						<!-- İOS için -->
+						<a href="https://rebrand.ly/PuntoWebAppStore" id="iosLink" style="display: none;">
 							<img src="img/appStore.jpg">
+						</a>
+						
+						<span id="windows" style="color: #555; font-size: .7rem; display: none;">veya</span>
+
+						<!-- Android için -->
+						<a href="https://rebrand.ly/PuntoWebGooglePlay" id="androidLink" style="display: none;">
+							<img src="img/googlePlay2.png">
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="section">
-				<div class="title">Çağa Uygun Bir Medya Anlayışı</div>
+				<div class="title">Akıllı şekilde kısaltılmış haberler</div>
 				<div class="screen-shots">
 					<div class="shot">
 						<img src="img/4.png">
@@ -102,5 +106,18 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		
+		if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+			document.getElementById('iosLink').style.display = 'block';
+		} else if (/Android/.test(navigator.userAgent)) {
+			document.getElementById('androidLink').style.display = 'block';
+		} else {
+			document.getElementById('androidLink').style.display = 'block';
+			document.getElementById('iosLink').style.display = 'block';
+			document.getElementById('windows').style.display = 'block';
+			document.getElementById('appMarkets').style.alignContent = 'center';
+		}
+	</script>
 </body>
 </html>
